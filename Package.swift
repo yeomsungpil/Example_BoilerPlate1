@@ -8,8 +8,8 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "Example_BoilerPlate1",
-            targets: ["Example_BoilerPlate1"]),
+            name: "UIComponents",
+            targets: ["UIComponents"]),
         .library(name: "Add_Library1", targets: ["Target1"])
     ],
     dependencies: [
@@ -21,12 +21,12 @@ let package = Package(
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "Example_BoilerPlate1",
+            name: "UIComponents",
             dependencies: ["Alamofire" , "SnapKit"]),
         .target(name: "Target1",
             dependencies: []),
-        .testTarget(
-            name: "Example_BoilerPlate1Tests",
-            dependencies: ["Example_BoilerPlate1"]),
+//        .testTarget(
+//            name: "Example_BoilerPlate1Tests",
+//            dependencies: ["Example_BoilerPlate1"]),
     ]
 )
