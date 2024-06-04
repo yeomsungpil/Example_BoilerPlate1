@@ -18,15 +18,13 @@ let package = Package(
         .package(url: "https://github.com/SnapKit/SnapKit.git", from : "5.0.1")
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "UIComponents",
             dependencies: ["Alamofire" , "SnapKit"]),
         .target(name: "Target1",
             dependencies: []),
-//        .testTarget(
-//            name: "Example_BoilerPlate1Tests",
-//            dependencies: ["Example_BoilerPlate1"]),
+        // 테스트를 정의하고 실행 할 수 있게 해주는 코드
+        // 패키지의 기능이 제대로 작동하는지 확인 할 수 있음, 자동화된 테스트를 작성하여 코드를 변경할 때마다 기능이 깨지지 않게 확인할 수 있음
+        .testTarget(name: "Example_BoilerPlate1Tests", dependencies: ["UIComponents"])
     ]
 )
