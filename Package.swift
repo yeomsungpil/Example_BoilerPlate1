@@ -15,7 +15,8 @@ let package = Package(
     dependencies: [
         // Alamofire 패키지를 종속성으로 추가합니다.
         .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.4.0"),
-        .package(url: "https://github.com/SnapKit/SnapKit.git", from : "5.0.1")
+        .package(url: "https://github.com/SnapKit/SnapKit.git", from : "5.0.1"),
+        .package(url: "https://github.com/yeomsungpil/Example_BoilerPlate1.git", from: "1.0.0")
     ],
     targets: [
         .target(
@@ -28,3 +29,7 @@ let package = Package(
         .testTarget(name: "Example_BoilerPlate1Tests", dependencies: ["UIComponents"])
     ]
 )
+
+
+// TODO: - 보일러 플레이트 UI 부분 Network 부분 파일 정리 및 SPM 회사 계정으로 만들기
+
