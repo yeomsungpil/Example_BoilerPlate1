@@ -10,6 +10,7 @@ let package = Package(
         .library(
             name: "Example_BoilerPlate1",
             targets: ["Example_BoilerPlate1"]),
+        .library(name: "Add_Library1", targets: ["Target1"])
     ],
     dependencies: [
         // Alamofire 패키지를 종속성으로 추가합니다.
@@ -22,6 +23,8 @@ let package = Package(
         .target(
             name: "Example_BoilerPlate1",
             dependencies: ["Alamofire" , "SnapKit"]),
+        .target(name: "Target1",
+            dependencies: []),
         .testTarget(
             name: "Example_BoilerPlate1Tests",
             dependencies: ["Example_BoilerPlate1"]),
