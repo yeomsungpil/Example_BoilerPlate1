@@ -10,8 +10,6 @@ let package = Package(
         .library(
             name: "Example_BoilerPlate1",
             targets: ["Example_BoilerPlate1"]),
-        .library(name: "UIComponents", targets: ["UIComponents"]),
-        .library(name: "Utility_Functions", targets: ["Utility_Functions"])
     ],
     dependencies: [
         // Alamofire 패키지를 종속성으로 추가합니다.
@@ -21,8 +19,6 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        .target(name: "UIComponents", dependencies: []),
-        .target(name: "Utility_Functions", dependencies: []),
         .target(
             name: "Example_BoilerPlate1",
             dependencies: ["Alamofire" , "SnapKit"]),
