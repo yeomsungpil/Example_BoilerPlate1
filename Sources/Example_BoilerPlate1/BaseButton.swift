@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class BaseButton: UIButton {
+open class BaseButton: UIButton {
     /// UIButton - 버튼 텍스트, 버튼 색, 버튼 배경색, 버튼 폰트, 버튼 폰트 사이즈, CornerRadius
     /// - Parameters:
     ///   - text: 버튼 텍스트
@@ -18,7 +18,7 @@ class BaseButton: UIButton {
     ///   - borderColor: 버튼 borderColor
     ///   - borderWidth: 버튼 borderWidth
     ///   - minimumScaleFactor: 버튼 내부의 텍스트 사이즈 조절
-    init(text: String,
+    public init(text: String,
          textColor: UIColor = .blue,
          bgColor: UIColor = .clear,
          font: UIFont.Weight,
@@ -75,7 +75,7 @@ class BaseButton: UIButton {
     ///   - tag: 태그
     ///   - font: 폰트
     ///   - fontsize: 폰트 사이즈
-    init(title: String, titleColor: UIColor, tag: Int, font: UIFont.Weight, fontsize: CGFloat) {
+    public init(title: String, titleColor: UIColor, tag: Int, font: UIFont.Weight, fontsize: CGFloat) {
         super.init(frame: .zero)
         self.setTitle(title, for: .normal)
         self.setTitleColor(titleColor, for: .normal)
@@ -85,7 +85,7 @@ class BaseButton: UIButton {
     
     /// SNS Login Button 셋팅
     /// - Parameter snsLogin: SNS name
-    init(snsLogin: String) {
+    public init(snsLogin: String) {
         super.init(frame: .zero)
         self.setTitle("", for: .normal)
         self.setImage(UIImage(named: snsLogin), for: .normal)
@@ -93,7 +93,7 @@ class BaseButton: UIButton {
     }
     
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
