@@ -10,7 +10,6 @@ let package = Package(
         .library(
             name: "Example_BoilerPlate1",
             targets: ["Example_BoilerPlate1"]),
-        .library(name: "Network_Layer", targets: ["Network_Layer"]),
         .library(name: "UIComponents", targets: ["UIComponents"]),
         .library(name: "Utility_Functions", targets: ["Utility_Functions"])
     ],
@@ -22,7 +21,6 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        .target(name: "Network_Layer", dependencies: []),
         .target(name: "UIComponents", dependencies: []),
         .target(name: "Utility_Functions", dependencies: []),
         .target(
